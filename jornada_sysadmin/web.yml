@@ -1,0 +1,8 @@
+- hosts: all
+  become: True
+  become_user: root
+
+  roles: 
+    - role-install-nginx
+    - role-install-zabbix-agent
+    - role-install-filebeat

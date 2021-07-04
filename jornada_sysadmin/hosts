@@ -1,0 +1,4 @@
+local ansible_host=192.168.1.52 ansible_user=root ansible_password=iago
+aws-elasticsearch ansible_host=34.236.238.18 ansible_ssh_private_key_file="/home/iago/Downloads/jornada_sysadmin.pem" ansible_user=ec2-user
+aws-zabbix ansible_host=3.228.217.138 ansible_ssh_private_key_file="/home/iago/Downloads/jornada_sysadmin.pem" ansible_user=ec2-user
+aws-web ansible_host=34.205.92.234 ansible_ssh_private_key_file="/home/iago/Downloads/jornada_sysadmin.pem" ansible_user=ec2-user

@@ -1,0 +1,16 @@
+---
+- name: install the filebeat rpm from a remote repo
+  yum:
+    name: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.13.2-x86_64.rpm
+    state: present
+  notify: start_filebeat    
+
+- name: Copy filebeat.yml
+  template:
+   src: ./templates/filebeat.yml.j2
+   dest: /etc/filebeat/filebeat.yml
+  notify: start_filebeat
+  
+- name: Enable modules Filebeat
+  command: filebeat modules enable nginx    
+  notify: start_filebeat

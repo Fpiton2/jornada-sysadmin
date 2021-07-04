@@ -1,0 +1,4 @@
+---
+# handlers file for filebeat
+- name: start_filebeat
+  service: name=filebeat enabled=yes state=restarted

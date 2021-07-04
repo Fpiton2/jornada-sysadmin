@@ -1,0 +1,12 @@
+---
+# tasks file for zabbix
+- name: change vm.max_map_count
+  command: "sysctl -q -w vm.max_map_count=262144"
+
+- name: "copy docker-compose file"
+  copy:
+    src: ./files/docker-compose.yml
+    dest: /tmp/docker-compose.yml
+
+- name: "docker-compose up"
+  command: "docker-compose -f /tmp/docker-compose.yml up -d"

@@ -1,0 +1,3 @@
+---
+# vars file for filebeat
+host_elasticsearch: 3.226.253.210
