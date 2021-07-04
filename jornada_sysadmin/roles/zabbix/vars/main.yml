@@ -1,3 +1,0 @@
----
-# vars file for zabbix
-docker_compose_file: /tmp/docker-compose.yml
